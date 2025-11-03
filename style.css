@@ -1,0 +1,84 @@
+/* Base layout (kept simple on purpose) */
+:root {
+  --bg: #f5f7fb;
+  --text: #4b5563;
+  --title: #1f2937;
+  --accent: #6b72e1; /* blue from the example */
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+h1, h2 {
+  font-family: 'Lora', Georgia, serif;
+  color: var(--title);
+  margin: 0 0 10px 0;
+}
+
+p { line-height: 1.6; }
+
+/* Container and cards (very close to the course style) */
+.container {
+  width: 700px;
+  margin: 40px auto;
+}
+
+.card-white {
+  background-color: white;
+  padding: 32px;
+  margin: 20px 0;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.img-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 12px auto;
+}
+
+.btn-blue {
+  display: inline-block;
+  background-color: var(--accent);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.btn-blue:hover {
+  background-color: #111827; /* near-black on hover */
+}
+
+.list-inline {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.list-inline li {
+  display: inline-block;
+  margin: 8px 12px;
+}
+
+.social a { text-decoration: none; color: var(--accent); }
+.social a:hover { text-decoration: underline; }
+
+/* Small screens: keep it readable */
+@media (max-width: 760px) {
+  .container { width: 90%; }
+}
+
+
